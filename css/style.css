@@ -1,0 +1,273 @@
+/* Custom Styles for Portfolio Website */
+
+/* Font Family */
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #4338ca, #6d28d9);
+}
+
+/* Navbar Styles */
+#navbar {
+    transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+/* Skill Badge Styles */
+.skill-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+.animate-slide-up-delay {
+    animation: slideUp 1s ease-out 0.3s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline Styles */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #4f46e5, #7c3aed, #ec4899);
+    border-radius: 2px;
+}
+
+.timeline-item:last-child::before {
+    height: 50%;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        padding-left: 0;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+}
+
+/* Project Card Hover Effect */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+/* Form Input Focus Styles */
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Button Hover Effects */
+button,
+a[download] {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before,
+a[download]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before,
+a[download]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Section Spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.show {
+    max-height: 500px;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Transitions */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    footer,
+    #contact {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .skill-badge {
+        border: 2px solid currentColor;
+    }
+    
+    .project-card {
+        border: 2px solid #000;
+    }
+}
+
