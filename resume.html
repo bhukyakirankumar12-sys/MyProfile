@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Kumar Bhukya - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #000;
+            background: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resume-container {
+            max-width: 180mm;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .header .title {
+            font-size: 12pt;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .header .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+            color: #333;
+        }
+
+        .header .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1.5px solid #2c3e50;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 10.5pt;
+            line-height: 1.5;
+            text-align: justify;
+            color: #333;
+        }
+
+        /* Experience & Education */
+        .experience-item, .education-item {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 11.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .item-company {
+            font-size: 10.5pt;
+            color: #555;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .item-date {
+            font-size: 10pt;
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .item-description {
+            margin-top: 5px;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .item-description ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .item-description li {
+            padding: 2px 0;
+            padding-left: 15px;
+            position: relative;
+            page-break-inside: avoid;
+        }
+
+        .item-description li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .skill-row {
+            display: flex;
+            align-items: baseline;
+            font-size: 10pt;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 120px;
+            margin-right: 8px;
+        }
+
+        .skill-items {
+            color: #333;
+            flex: 1;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .project-role {
+            font-size: 9.5pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .project-description {
+            font-size: 10pt;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        .project-tech {
+            font-size: 9.5pt;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Print Styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body {
+                background: white !important;
+                font-size: 11pt !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+
+            .resume-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+
+            .section {
+                margin-bottom: 10px;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .section-title {
+                break-after: avoid;
+                page-break-after: avoid;
+                border-bottom-color: #000 !important;
+                color: #000 !important;
+            }
+
+            .experience-item, .education-item, .project-item {
+                margin-bottom: 8px;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .item-header {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .item-description {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .item-description ul {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .item-description li {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .header {
+                border-bottom-color: #000 !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .item-title, .project-title {
+                color: #000 !important;
+            }
+
+            .summary {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .skills-container {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+        }
+
+        /* Screen view */
+        @media screen {
+            body {
+                background: #f5f5f5;
+                padding: 20px;
+            }
+
+            .resume-container {
+                background: white;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                padding: 20mm 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>KIRAN KUMAR BHUKYA</h1>
+            <div class="title">Technical Lead | Full Stack .NET Developer | AI-Augmented Engineering</div>
+            <div class="contact-info">
+                <span>📧 bhukyakirankumar12@gmail.com</span>
+                <span>📱 +91 9441853549</span>
+                <span>📍 Hyderabad, India</span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Experienced .NET Full-Stack Developer with 13+ years of expertise in designing, developing, and delivering scalable, high-performance web applications. Specialized in modernizing legacy VB6, Classic ASP, and monolithic .NET systems into cloud-ready, microservice-driven architectures. Proficient in AI-assisted engineering, applying design patterns (Factory, Singleton, CQRS, DDD), and leading Agile teams. Demonstrated success in architecting robust solutions, mentoring engineers, and ensuring code quality and excellence.
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-container">
+                <div class="skill-row">
+                    <span class="skill-label">Backend:</span>
+                    <span class="skill-items">.NET Framework, .NET Core, C#, ASP.NET MVC, Web API, WCF, Entity Framework, NHibernate, ADO.NET</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Frontend:</span>
+                    <span class="skill-items">Angular, ExtJS, React, JavaScript, Cordova, HTML/CSS</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Database:</span>
+                    <span class="skill-items">SQL Server, Oracle 12c/19c, MongoDB, Redis</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Cloud & DevOps:</span>
+                    <span class="skill-items">Azure, AWS, Docker, TeamCity, Octopus Deploy</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Messaging:</span>
+                    <span class="skill-items">Apache Kafka, NServiceBus</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Design Patterns:</span>
+                    <span class="skill-items">Factory, Singleton, CQRS, Domain-Driven Design, Unit of Work</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">AI & ML:</span>
+                    <span class="skill-items">ChatGPT, Azure OpenAI, GitHub Copilot, Cursor AI, LangChain, Qdrant, RAG, Python</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Legacy:</span>
+                    <span class="skill-items">VB 6.0, Classic ASP, Code Refactoring, Microservices Migration</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Technical Lead</div>
+                        <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                    </div>
+                    <div class="item-date">January 2021 - Present</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Leading multi-phase modernization programs converting VB6, Classic ASP, and WebForms solutions into .NET Core + Angular platforms with zero downtime cutovers</li>
+                        <li>Applying Factory, Singleton, CQRS, and DDD patterns to break monoliths into discoverable APIs, Kafka-driven services, and domain-aligned modules</li>
+                        <li>Architecting and implementing RAG-based chatbot systems using LangChain, Qdrant, MongoDB, and Redis for AI-assisted aviation workflows</li>
+                        <li>Coaching 4–10 person squads as Scrum Master, orchestrating sprint planning, backlog health, release gates, and stakeholder demos</li>
+                        <li>Mentoring engineers, conducting code reviews, and institutionalizing AI-assisted engineering practices with ChatGPT, Azure OpenAI, Cursor, and Copilot</li>
+                        <li>Upgraded Angular from v5 to v18, improving front-end performance, security, and maintainability across enterprise applications</li>
+                        <li>Set up Apache Kafka using Docker to streamline distributed messaging, enabling faster development and easier local testing</li>
+                        <li>Handled complete Auth0 setup including configuring applications, rules, roles, and permissions for Single Sign-On (SSO)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Senior Software Engineer</div>
+                        <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                    </div>
+                    <div class="item-date">July 2015 - December 2020</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Rebuilt CAMP IMS modules from VB and Classic ASP into ASP.NET MVC, Web API, and Angular with modular ExtJS components</li>
+                        <li>Designed RESTful APIs, background Windows services, and messaging pipelines using NServiceBus and Kafka</li>
+                        <li>Introduced Unit of Work and Repository patterns to streamline testability and database transaction management</li>
+                        <li>Partnered with product owners and QA to plan sprints, triage production issues, and deliver incremental modernization releases</li>
+                        <li>Optimized database performance and implemented caching strategies for improved system responsiveness</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Associate / Programming Analyst</div>
+                        <div class="item-company">Cognizant Technology Solutions</div>
+                    </div>
+                    <div class="item-date">April 2011 - July 2015</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Delivered .NET Framework and SQL Server solutions for global clients while reverse-engineering legacy VB/ASP components</li>
+                        <li>Crafted business logic layers with ADO.NET and stored procedures, later uplifting them to Web API endpoints</li>
+                        <li>Participated in code reviews, QA triage, and deployment rehearsals that seeded current delivery and leadership playbook</li>
+                        <li>Built early project management muscle by coordinating with onsite teams, narrating status, and mitigating release risks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">AMSTAT Premier</div>
+                    <div class="project-role">Technical Lead, Scrum Master | March 2024 - Present | Team: 6</div>
+                </div>
+                <div class="project-description">
+                    Modern web-based platform for aviation industry with advanced data analytics, custom reporting, and interactive dashboards. This was a rewrite project from a legacy ASP-based system to a modern .NET + Angular architecture, significantly improving scalability, performance, and user experience.
+                </div>
+                <div class="project-tech">Technologies: ASP.NET, C#, Angular, Ext JS, Entity Framework, Web API, DevExpress, Kafka, MongoDB, Windows Service</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">CAMP Inventory Management System (IMS)</div>
+                    <div class="project-role">Technical Lead, Scrum Master | July 2015 - Present | Team: 6</div>
+                </div>
+                <div class="project-description">
+                    Hosted, web-based inventory management solution supporting global, multi-location stockrooms. Features include tracking of shelf life, item value, location, purchasing, and receiving. This was a rewrite project migrating from legacy VB to modern .NET and Angular, enhancing system performance, modularity, and maintainability.
+                </div>
+                <div class="project-tech">Technologies: C#, MVC, Ext JS, Angular, NHibernate, Web API, NServiceBus, Kafka, VB, DevExpress, .NET Framework, .NET Core, Windows Service, Oracle</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">CAMP IMS Mobile</div>
+                    <div class="project-role">Technical Lead, Scrum Master | May 2017 - Present | Team: 4</div>
+                </div>
+                <div class="project-description">
+                    Mobile extension of the CAMP IMS web platform, designed to provide real-time inventory management, shelf-life tracking, and compliance monitoring through mobile devices. Developed using Angular and Cordova to enable mobile-first access for field operations and inventory teams.
+                </div>
+                <div class="project-tech">Technologies: .NET Core, C#, Angular, Web API, Cordova, Oracle</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">AI RAG Chatbot System</div>
+                </div>
+                <div class="project-description">
+                    Production-hardened RAG (Retrieval-Augmented Generation) chatbot leveraging LangChain, Qdrant vector databases, MongoDB, and Redis to digitize manuals, compliance docs, and service bulletins for intelligent document-based conversations.
+                </div>
+                <div class="project-tech">Technologies: LangChain, Qdrant, MongoDB, Redis, Python, LLM</div>
+            </div>
+        </div>
+
+        <!-- Leadership & AI Exposure -->
+        <div class="section">
+            <div class="section-title">Leadership & AI Exposure</div>
+            <div class="item-description">
+                <ul>
+                    <li><strong>Leadership:</strong> Led teams of 4–10 people as Scrum Master, ensuring work coordination, timely delivery, and quality standards. Managed sprint planning, daily stand-ups, and retrospectives. Conducted technical interviews, mentored team members, and built collaborative team environments.</li>
+                    <li><strong>AI Tools Usage:</strong> Using ChatGPT and Azure OpenAI for documentation automation (70% time reduction), GitHub Copilot and Cursor AI for code reviews and debugging (60% faster resolution), and AI assistants for SQL/test case generation and architecture assistance.</li>
+                    <li><strong>Current Focus:</strong> Actively building production-grade RAG systems with LangChain, Qdrant vector databases, MongoDB for document storage, and Redis for caching. Implementing intelligent document retrieval and context-aware LLM responses for enterprise applications.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">M.Tech, Computer Science</div>
+                        <div class="item-company">University of Hyderabad</div>
+                    </div>
+                    <div class="item-date">2008 - 2010</div>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">B.Tech, Electronics and Computer Engineering</div>
+                        <div class="item-company">Sreenidhi Institute of Technology</div>
+                    </div>
+                    <div class="item-date">2004 - 2008</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Button -->
+    <div class="no-print" style="text-align: center; margin: 20px; position: fixed; bottom: 20px; right: 20px;">
+        <button onclick="window.print()" style="background: #2c3e50; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            🖨️ Print / Save as PDF
+        </button>
+    </div>
+
+    <style>
+        .no-print {
+            display: block;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</body>
+</html>
