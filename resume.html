@@ -322,6 +322,40 @@
                 padding: 20mm 15mm;
             }
         }
+
+        /* Print Button */
+        .no-print {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .print-btn {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-family: 'Calibri', 'Arial', sans-serif;
+        }
+
+        .print-btn:hover {
+            background: #1a252f;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -533,21 +567,8 @@
     </div>
 
     <!-- Print Button -->
-    <div class="no-print" style="text-align: center; margin: 20px; position: fixed; bottom: 20px; right: 20px;">
-        <button onclick="window.print()" style="background: #2c3e50; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            🖨️ Print / Save as PDF
-        </button>
+    <div class="no-print">
+        <button onclick="window.print()" class="print-btn">Print / Save as PDF</button>
     </div>
-
-    <style>
-        .no-print {
-            display: block;
-        }
-        @media print {
-            .no-print {
-                display: none;
-            }
-        }
-    </style>
 </body>
 </html>
