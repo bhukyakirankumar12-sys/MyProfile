@@ -19,232 +19,199 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #2c3e50;
-            background: #f5f5f5;
+            background: white;
+            font-size: 9pt;
         }
 
         .resume-container {
-            max-width: 210mm;
+            width: 210mm;
             min-height: 297mm;
-            margin: 0 auto;
             background: white;
-            display: flex;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 0;
+            margin: 0 auto;
         }
 
-        /* Left Sidebar - Dark Teal */
-        .sidebar {
-            width: 65mm;
+        /* Header Section */
+        .header {
             background: linear-gradient(135deg, #00695c 0%, #00897b 100%);
             color: white;
-            padding: 15mm 8mm;
+            padding: 4mm 7mm;
         }
 
-        /* Profile Picture Area */
-        .profile-section {
-            text-align: center;
-            margin-bottom: 18px;
-            padding-bottom: 18px;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .profile-picture {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ffffff 0%, #e0f2f1 100%);
-            margin: 0 auto 12px;
+        .header-top {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
         }
 
-        .profile-picture span {
-            font-size: 28px;
-            font-weight: bold;
-            color: #00695c;
+        .profile-header {
+            flex: 1;
         }
 
         .name {
-            font-size: 20px;
+            font-size: 22pt;
             font-weight: bold;
             margin-bottom: 4px;
             letter-spacing: 0.5px;
         }
 
         .title {
-            font-size: 12px;
+            font-size: 11pt;
             opacity: 0.95;
-            font-weight: 400;
+            margin-bottom: 8px;
         }
 
-        /* Contact Info */
         .contact-info {
-            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 7.5pt;
+            margin-top: 6px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
-            font-size: 11px;
+            gap: 5px;
         }
 
         .contact-item i {
-            width: 20px;
-            margin-right: 10px;
-            font-size: 14px;
+            font-size: 9pt;
         }
 
-        /* Sidebar Sections */
-        .sidebar-section {
-            margin-bottom: 18px;
-        }
-
-        .sidebar-section-title {
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
             display: flex;
             align-items: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            justify-content: center;
+            border: 2px solid white;
         }
 
-        .sidebar-section-title i {
-            margin-right: 8px;
-            font-size: 16px;
+        .profile-pic span {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #00695c;
         }
 
-        .skill-tag {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 6px 12px;
-            margin: 4px 4px 4px 0;
-            border-radius: 15px;
-            font-size: 11px;
-            border: 1px solid rgba(255,255,255,0.3);
+        .summary {
+            margin-top: 6px;
+            font-size: 8.5pt;
+            line-height: 1.4;
+            text-align: justify;
+            background: rgba(255,255,255,0.1);
+            padding: 6px;
+            border-radius: 4px;
         }
 
-        .skill-item {
-            font-size: 11px;
-            margin-bottom: 8px;
-            padding-left: 5px;
-        }
-
-        .language-item {
-            margin-bottom: 10px;
-            font-size: 11px;
-        }
-
-        .language-name {
-            font-weight: 600;
-            margin-bottom: 3px;
-        }
-
-        .language-level {
-            font-size: 10px;
-            opacity: 0.9;
-        }
-
-        /* Main Content Area */
+        /* Main Content - Three Columns */
         .main-content {
-            flex: 1;
-            padding: 15mm 8mm;
-            background: white;
+            padding: 3mm 5mm;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5mm;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
         /* Section Styling */
         .section {
-            margin-bottom: 12px;
+            margin-bottom: 5px;
         }
 
         .section-title {
-            font-size: 13px;
+            font-size: 10pt;
             font-weight: bold;
             color: #00695c;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
+            margin-bottom: 4px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid #00695c;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border-bottom: 2px solid #00695c;
-            padding-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .section-title i {
-            margin-right: 8px;
-            font-size: 15px;
+            font-size: 9pt;
         }
 
-        /* Summary */
-        .summary {
-            font-size: 10px;
-            line-height: 1.5;
-            text-align: justify;
+        /* Skills */
+        .skill-category {
+            margin-bottom: 3px;
+            font-size: 8pt;
+        }
+
+        .skill-category strong {
+            color: #00695c;
+            font-size: 8.5pt;
+        }
+
+        .skill-list {
+            font-size: 7.5pt;
+            color: #555;
+            margin-left: 8px;
+            line-height: 1.3;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 6px;
+            margin: 2px 2px 2px 0;
+            border-radius: 3px;
+            font-size: 7pt;
             color: #333;
-            background: #f8f9fa;
-            padding: 10px;
-            border-left: 4px solid #00695c;
-            border-radius: 4px;
         }
 
-        /* Experience & Education */
-        .experience-item, .education-item, .project-item {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
+        /* Experience */
+        .experience-item {
+            margin-bottom: 5px;
+            padding-bottom: 5px;
             border-bottom: 1px solid #e0e0e0;
         }
 
         .experience-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .experience-item:last-child, .education-item:last-child, .project-item:last-child {
-            border-bottom: none;
         }
 
         .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
+            margin-bottom: 3px;
         }
 
         .item-title {
-            font-size: 13px;
+            font-size: 9pt;
             font-weight: bold;
             color: #2c3e50;
         }
 
         .item-company {
-            font-size: 11px;
+            font-size: 8pt;
             color: #00695c;
             font-weight: 600;
-            margin-top: 2px;
         }
 
         .item-date {
-            font-size: 10px;
+            font-size: 7.5pt;
             color: #666;
-            font-weight: 500;
-            white-space: nowrap;
-            background: #f0f0f0;
-            padding: 3px 8px;
-            border-radius: 10px;
+            margin-top: 1px;
         }
 
         .item-description {
-            margin-top: 6px;
-            font-size: 9.5px;
-            line-height: 1.4;
+            font-size: 7.5pt;
+            line-height: 1.3;
             color: #444;
+            margin-top: 3px;
         }
 
         .item-description ul {
@@ -255,11 +222,60 @@
 
         .item-description li {
             padding: 1px 0;
-            padding-left: 16px;
+            padding-left: 10px;
             position: relative;
         }
 
         .item-description li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #00695c;
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 8.5pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .project-desc {
+            font-size: 7.5pt;
+            color: #555;
+            line-height: 1.3;
+            margin-bottom: 2px;
+        }
+
+        .project-tech {
+            font-size: 7pt;
+            color: #00695c;
+            font-style: italic;
+        }
+
+        /* Leadership & AI Exposure */
+        .list-item {
+            font-size: 7.5pt;
+            line-height: 1.3;
+            color: #444;
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .list-item:before {
             content: "▸";
             position: absolute;
             left: 0;
@@ -267,39 +283,41 @@
             font-weight: bold;
         }
 
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 8px;
+        /* Education */
+        .education-item {
+            margin-bottom: 5px;
+            font-size: 8pt;
         }
 
-        .project-card {
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 4px;
-            border-left: 3px solid #00695c;
-        }
-
-        .project-title {
-            font-size: 12px;
-            font-weight: bold;
+        .education-title {
+            font-weight: 600;
             color: #2c3e50;
-            margin-bottom: 4px;
         }
 
-        .project-desc {
-            font-size: 9px;
-            color: #555;
-            line-height: 1.4;
-            margin-bottom: 6px;
+        .education-school {
+            font-size: 7.5pt;
+            color: #666;
         }
 
-        .project-tech {
-            font-size: 8px;
-            color: #00695c;
-            font-style: italic;
+        .education-year {
+            font-size: 7.5pt;
+            color: #999;
+        }
+
+        /* Languages */
+        .language-item {
+            font-size: 7.5pt;
+            margin-bottom: 3px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .language-level {
+            font-size: 7pt;
+            color: #666;
         }
 
         /* Print Styles */
@@ -310,10 +328,9 @@
 
             .resume-container {
                 box-shadow: none;
-                max-width: 100%;
             }
 
-            .sidebar {
+            .header {
                 background: #00695c !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
@@ -323,261 +340,422 @@
                 color: #00695c !important;
             }
 
-            .item-company {
-                color: #00695c !important;
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .resume-container {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .resume-container:last-child {
+                page-break-after: auto;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                page-break-inside: avoid;
+            }
+
+            .project-item {
+                page-break-inside: avoid;
+            }
+
+            /* Ensure Technical Skills Experience stays on second page */
+            .resume-container:nth-of-type(2) {
+                page-break-before: always;
+            }
+
+            .resume-container:nth-of-type(2) .section {
+                page-break-inside: avoid;
             }
         }
 
-        /* Screen view adjustments */
+        /* Screen view */
         @media screen {
             body {
-                padding: 20px;
+                padding: 15px;
+                background: #f5f5f5;
+            }
+
+            .resume-container {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
             }
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
-        <!-- Left Sidebar -->
-        <div class="sidebar">
-            <!-- Profile Section -->
-            <div class="profile-section">
-                <div class="profile-picture">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="header-top">
+                <div class="profile-header">
+                    <div class="name">KIRAN KUMAR BHUKYA</div>
+                    <div class="title">Technical Lead | Legacy Modernization & Full Stack .NET Developer | AI-Augmented Engineering</div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>bhukyakirankumar12@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9441853549</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/kiran-bhukya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>github.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-pic">
                     <span>KK</span>
                 </div>
-                <div class="name">KIRAN KUMAR BHUKYA</div>
-                <div class="title">Technical Lead | Full Stack .NET Developer</div>
+            </div>
+            <div class="summary">
+                Experienced .NET Full-Stack Developer with 13+ years expertise in designing, developing, and delivering scalable web applications. Specialized in modernizing legacy VB6, Classic ASP, and monolithic .NET systems into cloud-ready, microservice-driven architectures. Proficient in AI-assisted engineering, applying design patterns (Factory, Singleton, CQRS, DDD), and leading Agile teams. Demonstrated success in architecting robust solutions, mentoring engineers, and ensuring code quality.
+            </div>
+        </div>
+
+        <!-- Main Content - Three Columns -->
+        <div class="main-content">
+            <!-- Column 1: Skills, Patterns, Languages -->
+            <div class="column">
+                <!-- Technical Skills -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-cogs"></i> Technical Skills
+                    </div>
+                    <div class="skill-category">
+                        <strong>Backend:</strong>
+                        <div class="skill-list">.NET, .NET Core, C#, MVC, Web API, ADO.NET, Entity Framework, NHibernate, WCF, FastAPI</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Frontend:</strong>
+                        <div class="skill-list">Angular, ExtJS, React, JavaScript, TypeScript, HTML5, CSS3, Cordova</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Database:</strong>
+                        <div class="skill-list">SQL Server, Oracle 12c/19c, MongoDB, Redis</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Cloud:</strong>
+                        <div class="skill-list">Azure, AWS, Docker, Microservices</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Messaging:</strong>
+                        <div class="skill-list">Kafka, NServiceBus, Event-Driven</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>AI/ML:</strong>
+                        <div class="skill-list">ChatGPT, Azure OpenAI, GitHub Copilot, Cursor AI, LangChain, Qdrant, RAG, Python, LLM</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>DevOps:</strong>
+                        <div class="skill-list">TeamCity, Octopus Deploy, DevExpress, Power BI, Auth0, Git</div>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Legacy:</strong>
+                        <div class="skill-list">VB 6.0, Classic ASP, ASP.NET WebForms, Re-platforming, Microservices Migration</div>
+                    </div>
+                </div>
+
+                <!-- Design Patterns -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-project-diagram"></i> Design Patterns
+                    </div>
+                    <span class="skill-tag">CQRS</span>
+                    <span class="skill-tag">DDD</span>
+                    <span class="skill-tag">Unit of Work</span>
+                    <span class="skill-tag">Event-Driven</span>
+                </div>
+
+                <!-- Languages -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-globe"></i> Languages
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">English</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Telugu</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Hindi</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">M.Tech, Computer Science</div>
+                        <div class="education-school">University of Hyderabad</div>
+                        <div class="education-year">2008 - 2010</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">B.Tech, ECE</div>
+                        <div class="education-school">Sreenidhi Institute</div>
+                        <div class="education-year">2004 - 2008</div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Contact Information -->
-            <div class="contact-info sidebar-section">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>bhukyakirankumar12@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 9441853549</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Hyderabad, India</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span>linkedin.com/in/kiran-bhukya</span>
+            <!-- Column 2: Experience -->
+            <div class="column">
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-briefcase"></i> Professional Experience
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div class="item-title">Technical Lead</div>
+                            <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                            <div class="item-date">Jan 2021 - Present</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Leading multi-phase modernization programs converting VB6, Classic ASP, and WebForms into .NET Core + Angular platforms with zero downtime cutovers</li>
+                                <li>Applying Factory, Singleton, CQRS, and DDD patterns to break monoliths into discoverable APIs, Kafka-driven services, and domain-aligned modules</li>
+                                <li>Architecting and implementing RAG-based chatbot systems using LangChain, Qdrant, MongoDB, and Redis for AI-assisted aviation workflows</li>
+                                <li>Coaching 4–10 person squads as Scrum Master, orchestrating sprint planning, backlog health, release gates, and stakeholder demos</li>
+                                <li>Mentoring engineers, conducting code reviews, and institutionalizing AI-assisted engineering practices with ChatGPT, Azure OpenAI, Cursor, and Copilot</li>
+                                <li>Upgraded Angular from v5 to v18, improving front-end performance, security, and maintainability across enterprise applications</li>
+                                <li>Set up Apache Kafka using Docker to streamline distributed messaging, enabling faster development and easier local testing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div class="item-title">Senior Software Engineer</div>
+                            <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                            <div class="item-date">Jul 2015 - Dec 2020</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Rebuilt CAMP IMS modules from VB and Classic ASP into ASP.NET MVC, Web API, and Angular with modular ExtJS components</li>
+                                <li>Designed RESTful APIs, background Windows services, and messaging pipelines using NServiceBus and Kafka</li>
+                                <li>Introduced Unit of Work and Repository patterns to streamline testability and database transaction management</li>
+                                <li>Partnered with product owners and QA to plan sprints, triage production issues, and deliver incremental modernization releases</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div class="item-title">Associate / Programming Analyst</div>
+                            <div class="item-company">Cognizant Technology Solutions</div>
+                            <div class="item-date">Apr 2011 - Jul 2015</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Delivered .NET Framework and SQL Server solutions for global clients while reverse-engineering legacy VB/ASP components</li>
+                                <li>Crafted business logic layers with ADO.NET and stored procedures, later uplifting them to Web API endpoints</li>
+                                <li>Participated in code reviews, QA triage, and deployment rehearsals that seeded my current delivery and leadership playbook</li>
+                                <li>Built early project management muscle by coordinating with onsite teams, narrating status, and mitigating release risks</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Technical Skills -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">
-                    <i class="fas fa-cogs"></i> Technical Skills
-                </div>
-                <div class="skill-item"><strong>Backend:</strong> .NET, .NET Core, C#, MVC, Web API, Entity Framework, NHibernate</div>
-                <div class="skill-item"><strong>Frontend:</strong> Angular, ExtJS, React, JavaScript</div>
-                <div class="skill-item"><strong>Database:</strong> SQL Server, Oracle, MongoDB, Redis</div>
-                <div class="skill-item"><strong>Cloud:</strong> Azure, AWS, Docker</div>
-                <div class="skill-item"><strong>AI/ML:</strong> OpenAI, LangChain, Qdrant, Python, RAG</div>
-                <div class="skill-item"><strong>Messaging:</strong> Kafka, NServiceBus</div>
-            </div>
+            <!-- Column 3: Projects, AI Exposure, Leadership -->
+            <div class="column">
+                <!-- Key Projects - AI Projects First -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-project-diagram"></i> Key Projects
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">AI RAG Chatbot System</div>
+                        <div class="project-desc">Production-hardened RAG chatbot leveraging LangChain, Qdrant, MongoDB, and Redis to digitize manuals, compliance docs, and service bulletins for intelligent document-based conversations.</div>
+                        <div class="project-tech">LangChain, Qdrant, MongoDB, Redis, Python, LLM, Vector Search, RAG</div>
+                    </div>
 
-            <!-- Design Patterns -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">
-                    <i class="fas fa-project-diagram"></i> Design Patterns
-                </div>
-                <span class="skill-tag">Factory</span>
-                <span class="skill-tag">Singleton</span>
-                <span class="skill-tag">CQRS</span>
-                <span class="skill-tag">DDD</span>
-                <span class="skill-tag">Unit of Work</span>
-            </div>
+                    <div class="project-item">
+                        <div class="project-title">AI Page Summaries - Premier</div>
+                        <div class="project-desc">Page-level summarization feature integrated into AMSTAT Premier. Users can click a summarize button on any page to get comprehensive AI-generated overviews. Enables comparison with other aircraft for purchase recommendations.</div>
+                        <div class="project-tech">OpenAI, Qdrant InMemory, Python, FastAPI, Angular, AI Summarization</div>
+                    </div>
 
-            <!-- Soft Skills -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">
-                    <i class="fas fa-lightbulb"></i> Leadership
-                </div>
-                <span class="skill-tag">Scrum Master</span>
-                <span class="skill-tag">Team Leadership</span>
-                <span class="skill-tag">Mentoring</span>
-                <span class="skill-tag">Agile</span>
-                <span class="skill-tag">Stakeholder Management</span>
-            </div>
+                    <div class="project-item">
+                        <div class="project-title">Aircraft Purchase Recommendation (AI)</div>
+                        <div class="project-desc">AI-powered recommendation system using machine learning with explainable scoring, CQRS read models, and microservices exposing secure APIs for fleet planners.</div>
+                        <div class="project-tech">Python, ML Models, .NET API, CQRS, Microservices</div>
+                    </div>
 
-            <!-- Education -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">
-                    <i class="fas fa-graduation-cap"></i> Education
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <div style="font-weight: 600; font-size: 12px; margin-bottom: 3px;">M.Tech, Computer Science</div>
-                    <div style="font-size: 10px; opacity: 0.9;">University of Hyderabad</div>
-                    <div style="font-size: 10px; opacity: 0.8;">2008 - 2010</div>
-                </div>
-                <div>
-                    <div style="font-weight: 600; font-size: 12px; margin-bottom: 3px;">B.Tech, ECE</div>
-                    <div style="font-size: 10px; opacity: 0.9;">Sreenidhi Institute</div>
-                    <div style="font-size: 10px; opacity: 0.8;">2004 - 2008</div>
-                </div>
-            </div>
+                    <div class="project-item">
+                        <div class="project-title">AMSTAT Premier</div>
+                        <div class="project-desc">Modern web-based platform for aviation industry with advanced data analytics, custom reporting, interactive dashboards, and integrated AI-powered page summarization features. Legacy ASP to .NET + Angular rewrite project with AI capabilities.</div>
+                        <div class="project-tech">ASP.NET, C#, Angular, FastAPI, Kafka, MongoDB, DevExpress</div>
+                    </div>
 
-            <!-- Languages -->
-            <div class="sidebar-section">
-                <div class="sidebar-section-title">
-                    <i class="fas fa-globe"></i> Languages
                 </div>
-                <div class="language-item">
-                    <div class="language-name">English</div>
-                    <div class="language-level">Native / Bilingual</div>
+
+                <!-- AI & GenAI Exposure -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-robot"></i> AI & GenAI Exposure
+                    </div>
+                    <div class="list-item">Documentation Automation: Using ChatGPT and Azure OpenAI to automatically generate technical documentation, API specs, and code comments, reducing documentation time by 70%</div>
+                    <div class="list-item">Code Reviews & Quality: Leveraging GitHub Copilot, Cursor AI, and ChatGPT for intelligent code reviews, identifying potential bugs, suggesting optimizations, and ensuring adherence to best practices</div>
+                    <div class="list-item">SQL & Test Case Generation: Automating SQL query generation and comprehensive test case creation using AI, significantly improving development velocity and test coverage</div>
+                    <div class="list-item">Debugging & Troubleshooting: Using AI assistants to quickly diagnose issues, analyze stack traces, and provide context-aware debugging solutions, reducing resolution time by 60%</div>
+                    <div class="list-item">Architecture Assistance: Collaborating with AI tools to design scalable system architectures, evaluate design patterns, and make informed technical decisions for complex projects</div>
+                    <div class="list-item">Current Focus: Building production-grade RAG systems with LangChain, Qdrant vector databases, MongoDB for document storage, and Redis for caching. Implementing intelligent document retrieval and context-aware LLM responses</div>
                 </div>
-                <div class="language-item">
-                    <div class="language-name">Telugu</div>
-                    <div class="language-level">Native / Bilingual</div>
-                </div>
-                <div class="language-item">
-                    <div class="language-name">Hindi</div>
-                    <div class="language-level">Professional</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- New Page: Leadership & Modernization -->
+    <div class="resume-container">
+        <div class="header">
+            <div class="header-top">
+                <div class="profile-header">
+                    <div class="name">KIRAN KUMAR BHUKYA</div>
+                    <div class="title">Technical Lead | Legacy Modernization & Full Stack .NET Developer | AI-Augmented Engineering</div>
                 </div>
             </div>
         </div>
 
-        <!-- Main Content -->
         <div class="main-content">
-            <!-- Professional Summary -->
-            <div class="section">
-                <div class="section-title">
-                    <i class="fas fa-user"></i> Professional Summary
+            <div class="column" style="grid-column: 1 / -1;">
+                <!-- Leadership & Modernization -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-users-cog"></i> Leadership & Modernization
+                    </div>
+                    <div class="list-item">Scrum Master for 4–10 person squads with consistent sprint velocity, backlog hygiene, and outcome-based reporting</div>
+                    <div class="list-item">Mentor, interviewer, and onboarding coach who institutionalizes coding standards, secure SDLC, and AI-assisted workflows</div>
+                    <div class="list-item">Bridges business, product, and engineering stakeholders with crisp RAID logs, demo narratives, and release notes</div>
+                    <div class="list-item">Migrates VB6/Classic ASP stacks to .NET Core, Angular, and mobile-first experiences with strangler-fig patterns</div>
+                    <div class="list-item">Defines domain models, aggregates, and messaging contracts rooted in DDD, CQRS, and event sourcing fundamentals</div>
+                    <div class="list-item">Pairs infrastructure automation (TeamCity, Octopus, Docker) with observability and security guardrails</div>
+                    <div class="list-item">Upgraded Angular from v5 to v18, improving front-end performance, security, and maintainability across enterprise applications</div>
+                    <div class="list-item">Set up Apache Kafka using Docker to streamline distributed messaging, enabling faster development and easier local testing</div>
                 </div>
-                <div class="summary">
-                    Experienced .NET Full-Stack Developer with 13+ years expertise in designing, developing, and delivering scalable web applications. Specialized in modernizing legacy VB6, Classic ASP, and monolithic .NET systems into cloud-ready, microservice-driven architectures. Proficient in AI-assisted engineering, applying design patterns (Factory, Singleton, CQRS, DDD), and leading Agile teams. Demonstrated success in architecting robust solutions, mentoring engineers, and ensuring code quality.
+                <!-- Additional AI & GenAI Details -->
+                <div class="section" style="margin-bottom: 4px;">
+                    <div class="section-title">
+                        <i class="fas fa-robot"></i> Additional AI & GenAI Capabilities
+                    </div>
+                    <div class="list-item" style="margin-bottom: 2px;">ML-Ready Design: Designing systems with ML-ready architectures, implementing recommendation engines, and building RAG-based chatbot systems using vector search and embeddings</div>
+                    <div class="list-item" style="margin-bottom: 2px;">Leveraging AI tools for 2+ years, with 1 year of hands-on experience in building AI-powered systems</div>
+                    <div class="list-item" style="margin-bottom: 2px;">Production-grade RAG systems with LangChain, Qdrant vector databases, MongoDB for document storage, and Redis for caching</div>
                 </div>
-            </div>
 
-            <!-- Professional Experience -->
-            <div class="section">
-                <div class="section-title">
-                    <i class="fas fa-briefcase"></i> Professional Experience
-                </div>
-                
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Technical Lead</div>
-                            <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                <!-- Technical Skills Experience -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-tools"></i> Technical Skills Experience
+                    </div>
+                    
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Backend Technologies:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>.NET Framework/Core:</strong> 13+ years building enterprise applications, RESTful APIs, and microservices. Migrated legacy VB6/ASP to modern .NET Core architectures.<br>
+                            <strong>C#:</strong> Expert-level proficiency with async/await, LINQ, generics, and advanced language features across 13+ years.<br>
+                            <strong>ASP.NET MVC:</strong> 8+ years developing scalable MVC applications with clean architecture and routing patterns.<br>
+                            <strong>Web API:</strong> 7+ years designing RESTful APIs, versioning strategies, integrated with Angular, React, and mobile applications.<br>
+                            <strong>Entity Framework/NHibernate:</strong> 10+ years using ORMs for data access, migrations, and query optimization. Implemented Unit of Work and Repository patterns.<br>
+                            <strong>FastAPI:</strong> 1+ year building Python-based APIs for AI/ML services, integrating with .NET backends and LLM models.
                         </div>
-                        <div class="item-date">Jan 2021 - Present</div>
                     </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Leading modernization programs converting VB6, Classic ASP, and WebForms into .NET Core + Angular platforms</li>
-                            <li>Applying Factory, Singleton, CQRS, and DDD patterns to break monoliths into APIs, Kafka-driven services, and domain modules</li>
-                            <li>Architecting RAG-based chatbot systems using LangChain, Qdrant, MongoDB, and Redis for AI-assisted workflows</li>
-                            <li>Coaching 4–10 person squads as Scrum Master, orchestrating sprint planning, backlog health, and stakeholder demos</li>
-                            <li>Mentoring engineers and institutionalizing AI-assisted practices with ChatGPT, Azure OpenAI, Cursor, and Copilot</li>
-                            <li>Upgraded Angular from v5 to v18, improving performance, security, and maintainability</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Senior Software Engineer</div>
-                            <div class="item-company">CAMP Systems Pvt. Ltd.</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Frontend Technologies:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>Angular:</strong> 8+ years experience, upgraded applications from v5 to v18. Built complex SPAs with routing and state management.<br>
+                            <strong>ExtJS:</strong> 6+ years developing enterprise applications with ExtJS grids, forms, and complex UI components.<br>
+                            <strong>JavaScript/TypeScript:</strong> 13+ years JavaScript development, 5+ years TypeScript for type-safe Angular applications.<br>
+                            <strong>Cordova:</strong> 4+ years developing cross-platform mobile applications, integrating with .NET Core APIs.
                         </div>
-                        <div class="item-date">Jul 2015 - Dec 2020</div>
                     </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Rebuilt CAMP IMS modules from VB and Classic ASP into ASP.NET MVC, Web API, and Angular</li>
-                            <li>Designed RESTful APIs, background Windows services, and messaging pipelines using NServiceBus and Kafka</li>
-                            <li>Introduced Unit of Work and Repository patterns to streamline testability and database transactions</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Associate / Programming Analyst</div>
-                            <div class="item-company">Cognizant Technology Solutions</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Database & Storage:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>SQL Server:</strong> 13+ years designing schemas, writing stored procedures, optimizing queries, and managing large-scale databases.<br>
+                            <strong>Oracle 12c/19c:</strong> 8+ years working with Oracle databases, PL/SQL, and enterprise-level data management.<br>
+                            <strong>MongoDB:</strong> 2+ years using MongoDB for document storage in AI/ML projects and RAG systems.<br>
+                            <strong>Redis:</strong> 1 year implementing caching strategies, session management, and real-time data storage.
                         </div>
-                        <div class="item-date">Apr 2011 - Jul 2015</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Delivered .NET Framework and SQL Server solutions for global clients while reverse-engineering legacy VB/ASP components</li>
-                            <li>Crafted business logic layers with ADO.NET and stored procedures, later uplifting to Web API endpoints</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Projects - AI Projects First -->
-            <div class="section">
-                <div class="section-title">
-                    <i class="fas fa-project-diagram"></i> Key Projects
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- AI RAG Chatbot System -->
-                    <div class="project-card">
-                        <div class="project-title">AI RAG Chatbot System</div>
-                        <div class="project-desc">Production RAG chatbot using LangChain, Qdrant, MongoDB, and Redis for intelligent document-based conversations.</div>
-                        <div class="project-tech">LangChain, Qdrant, MongoDB, Redis, Python, LLM</div>
                     </div>
 
-                    <!-- AI Page Summaries -->
-                    <div class="project-card">
-                        <div class="project-title">AI Page Summaries - Premier</div>
-                        <div class="project-desc">Page-level summarization feature with OpenAI, Qdrant InMemory. Enables comparison with other aircraft for purchase recommendations.</div>
-                        <div class="project-tech">OpenAI, Qdrant InMemory, Python, FastAPI, Angular</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Cloud & DevOps:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>Azure:</strong> 1+ years deploying applications, managing cloud resources, and integrating Azure services.<br>
+                            <strong>AWS:</strong> 1+ years experience with AWS services for cloud deployments and infrastructure management.<br>
+                            <strong>Docker:</strong> 1+ years containerizing applications, setting up local development environments, and deploying containerized services.<br>
+                            <strong>TeamCity:</strong> 7+ years configuring CI/CD pipelines, automated builds, and deployment workflows.<br>
+                            <strong>Octopus Deploy:</strong> 7+ years managing automated deployments, release management, and environment-specific configurations.
+                        </div>
                     </div>
 
-                    <!-- Aircraft Purchase Recommendation -->
-                    <div class="project-card">
-                        <div class="project-title">Aircraft Purchase Recommendation (AI)</div>
-                        <div class="project-desc">AI-powered recommendation system with explainable scoring, CQRS read models, and microservices APIs.</div>
-                        <div class="project-tech">Python, ML Models, .NET API, CQRS</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Messaging & Architecture:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>Apache Kafka:</strong> 3+ years implementing event-driven architectures, setting up Kafka clusters with Docker, and building distributed messaging systems.<br>
+                            <strong>NServiceBus:</strong> 4+ years using NServiceBus for reliable messaging, saga patterns, and distributed system communication.<br>
+                            <strong>Microservices:</strong> 5+ years designing and implementing microservices architectures, API gateways, and service decomposition.<br>
+                            <strong>CQRS/DDD:</strong> 4+ years applying CQRS patterns, Domain-Driven Design, event sourcing, and bounded context modeling.
+                        </div>
                     </div>
 
-                    <!-- AMSTAT Premier -->
-                    <div class="project-card">
-                        <div class="project-title">AMSTAT Premier</div>
-                        <div class="project-desc">Modern aviation platform with data analytics, dashboards, and integrated AI features. Legacy ASP to .NET + Angular rewrite.</div>
-                        <div class="project-tech">ASP.NET, C#, Angular, FastAPI, Kafka, MongoDB</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">AI/ML Technologies:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>LangChain:</strong> 1+ year building RAG systems, document processing pipelines, and LLM integration workflows.<br>
+                            <strong>Qdrant:</strong> 1+ year implementing vector databases for semantic search, document embeddings, and similarity matching.<br>
+                            <strong>Python:</strong> 2+ years using Python for AI/ML services, FastAPI development, and integrating with LLM models.<br>
+                            <strong>ChatGPT/Azure OpenAI:</strong> 2+ years leveraging AI assistants for documentation, code reviews, debugging, reducing development time by 60-70%.<br>
+                            <strong>GitHub Copilot/Cursor AI:</strong> 2+ years using AI coding assistants for rapid development, code generation, and intelligent code completion.
+                        </div>
                     </div>
 
-                    <!-- CAMP IMS -->
-                    <div class="project-card">
-                        <div class="project-title">CAMP IMS</div>
-                        <div class="project-desc">Hosted inventory management for global stockrooms. Legacy VB to modern .NET and Angular rewrite project.</div>
-                        <div class="project-tech">C#, MVC, Angular, NHibernate, Kafka, Oracle</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Legacy Modernization:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>VB 6.0/Classic ASP:</strong> 8+ years reverse-engineering and migrating legacy VB6 and Classic ASP applications to modern .NET Core and Angular platforms.<br>
+                            <strong>Strangler Fig Pattern:</strong> 5+ years applying strangler fig patterns for zero-downtime migrations, incremental modernization, and risk mitigation.<br>
+                            <strong>Code Refactoring:</strong> 13+ years refactoring legacy codebases, improving maintainability, and applying design patterns to modernize applications.
+                        </div>
                     </div>
 
-                    <!-- CAMP IMS Mobile -->
-                    <div class="project-card">
-                        <div class="project-title">CAMP IMS Mobile</div>
-                        <div class="project-desc">Mobile extension for real-time inventory management and compliance monitoring through mobile devices.</div>
-                        <div class="project-tech">.NET Core, Angular, Cordova, Oracle</div>
+                    <div class="skill-category" style="margin-bottom: 5px;">
+                        <strong style="color: #00695c; font-size: 8.5pt;">Tools & Frameworks:</strong>
+                        <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
+                            <strong>DevExpress:</strong> 8+ years using DevExpress components for data grids, reporting, and enterprise UI components.<br>
+                            <strong>Power BI:</strong> 3+ years creating dashboards, reports, and data visualizations for business intelligence and analytics.<br>
+                            <strong>Auth0:</strong> 3+ years implementing authentication and authorization, OAuth flows, and secure API access controls.<br>
+                            <strong>Git:</strong> 10+ years using Git for version control, branching strategies, code reviews, and collaborative development workflows.
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- AI & GenAI Exposure -->
-            <div class="section">
-                <div class="section-title">
-                    <i class="fas fa-robot"></i> AI & GenAI Exposure
-                </div>
-                <div class="item-description">
-                    <ul>
-                        <li><strong>Documentation Automation:</strong> Using ChatGPT and Azure OpenAI to generate technical documentation, reducing time by 70%</li>
-                        <li><strong>Code Reviews:</strong> Leveraging GitHub Copilot, Cursor AI, and ChatGPT for intelligent code reviews and optimization</li>
-                        <li><strong>SQL & Test Generation:</strong> Automating SQL queries and test case creation using AI, improving development velocity</li>
-                        <li><strong>Current Focus:</strong> Building production-grade RAG systems with LangChain, Qdrant, MongoDB, and Redis</li>
-                    </ul>
                 </div>
             </div>
         </div>
