@@ -13,8 +13,8 @@
         }
 
         @page {
-            size: A4;
-            margin: 0;
+            size: A4 portrait;
+            margin: 10mm;
         }
 
         body {
@@ -23,13 +23,15 @@
             color: #2c3e50;
             background: white;
             font-size: 9pt;
+            margin: 0;
+            padding: 0;
         }
 
         .resume-container {
-            width: 210mm;
-            min-height: 297mm;
+            width: 100%;
+            max-width: 210mm;
             background: white;
-            padding: 0;
+            padding: 8mm;
             margin: 0 auto;
         }
 
@@ -345,34 +347,16 @@
                 print-color-adjust: exact;
             }
 
-            .resume-container {
-                page-break-after: always;
+            .section,
+            .experience-item,
+            .project-item,
+            .list-item {
                 page-break-inside: avoid;
             }
 
-            .resume-container:last-child {
-                page-break-after: auto;
-            }
-
-            .section {
-                page-break-inside: avoid;
-            }
-
-            .experience-item {
-                page-break-inside: avoid;
-            }
-
-            .project-item {
-                page-break-inside: avoid;
-            }
-
-            /* Ensure Technical Skills Experience stays on second page */
-            .resume-container:nth-of-type(2) {
-                page-break-before: always;
-            }
-
-            .resume-container:nth-of-type(2) .section {
-                page-break-inside: avoid;
+            h1, h2, h3, p, li {
+                orphans: 3;
+                widows: 3;
             }
         }
 
@@ -396,7 +380,7 @@
             <div class="header-top">
                 <div class="profile-header">
                     <div class="name">KIRAN KUMAR BHUKYA</div>
-                    <div class="title">Technical Lead | Legacy Modernization & Full Stack .NET Developer | AI-Augmented Engineering</div>
+                    <div class="title">Current AI Architect | Agentic AI Leader | AI SDLC Strategist</div>
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -425,7 +409,7 @@
                 </div>
             </div>
             <div class="summary">
-                Technical Lead and AI Engineering Architect with 13+ years of experience delivering enterprise software solutions and designing AI-powered engineering platforms. Specialized in full-stack development, enterprise architecture, cloud technologies, DevOps, and agentic AI systems. Passionate about leveraging AI-driven workflows, knowledge-centric engineering, and multi-agent architectures to accelerate software delivery and improve engineering effectiveness.
+                AI Architect with 15+ years of experience building enterprise software and AI-native engineering platforms. Expert in agentic AI, end-to-end AI SDLC, rapid MVP delivery, and legacy modernization. I design multi-agent workflows, knowledge-driven systems, and engineering platforms that convert organizational knowledge into reusable assets—successfully delivering ASOv2 as an MVP in 7 days.
             </div>
         </div>
 
@@ -556,20 +540,19 @@
                     
                     <div class="experience-item">
                         <div class="item-header">
-                            <div class="item-title">Technical Lead</div>
+                            <div class="item-title">Current AI Architect</div>
                             <div class="item-company">CAMP Systems Pvt. Ltd.</div>
                             <div class="item-date">Jan 2021 - Present</div>
                         </div>
                         <div class="item-description">
                             <ul>
-                                <li>Leading multi-phase modernization programs converting VB6, Classic ASP, and WebForms into .NET Core + Angular platforms with zero downtime cutovers</li>
-                                <li>Applying Factory, Singleton, CQRS, and DDD patterns to break monoliths into discoverable APIs, Kafka-driven services, and domain-aligned modules</li>
-                                <li>Architecting and implementing RAG-based chatbot systems using LangChain, Qdrant, MongoDB, and Redis for AI-assisted aviation workflows</li>
-                                <li>Coaching 4–10 person squads as Scrum Master, orchestrating sprint planning, backlog health, release gates, and stakeholder demos</li>
-                                <li>Mentoring engineers, conducting code reviews, and institutionalizing AI-assisted engineering practices with ChatGPT, Azure OpenAI, Cursor, and Copilot</li>
-                                <li>Upgraded Angular from v5 to v18, improving front-end performance, security, and maintainability across enterprise applications</li>
-                                <li>Set up Apache Kafka using Docker to streamline distributed messaging, enabling faster development and easier local testing</li>
-                                <li><strong>AI Responsibilities:</strong> Driving adoption of AI-assisted engineering practices, designing agentic workflows for software delivery, evaluating AI-powered development platforms, creating knowledge-driven engineering approaches, and leading architecture modernization initiatives using AI-assisted workflows</li>
+                                <li>Leading AI SDLC transformation from discovery to production, covering requirement shaping, solution framing, architecture validation, implementation guidance, testing, deployment, and continuous improvement</li>
+                                <li>Designing agentic AI systems and multi-agent workflows that improve planning, coding, knowledge retrieval, and decision support across delivery teams</li>
+                                <li>Successfully delivered the ASOv2 MVP in just 7 days by combining rapid requirement synthesis, AI-assisted execution, and disciplined delivery governance</li>
+                                <li>Modernizing legacy VB6, Classic ASP, and WebForms estates into .NET Core + Angular platforms with strong quality, performance, and maintainability outcomes</li>
+                                <li>Defining reusable architecture and engineering patterns for distributed services, messaging, cloud-native delivery, and intelligent automation</li>
+                                <li>Coaching teams and stakeholders with clear delivery governance, backlog discipline, and outcome-focused execution</li>
+                                <li>Mentoring engineers and institutionalizing AI-assisted engineering practices using Copilot, Azure OpenAI, Cursor, and related tools</li>
                             </ul>
                         </div>
                     </div>
@@ -641,6 +624,18 @@
                     </div>
 
                 </div>
+                <!-- AI SDLC Process -->
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-cogs"></i> AI SDLC Process
+                    </div>
+                    <div class="list-item">Discovery & Requirement Synthesis: rapid stakeholder interviews, intent mapping, and success criteria definition</div>
+                    <div class="list-item">Knowledge Indexing & Context Engineering: ingesting documents, embeddings, and building a semantic knowledge index for reliable context</div>
+                    <div class="list-item">Solution Framing & Agent Design: define multi-agent roles, orchestration patterns, and cost-aware prompt strategies</div>
+                    <div class="list-item">Implementation Guidance & Code Generation: AI-assisted scaffolding, feature implementation, and reusable engineering templates</div>
+                    <div class="list-item">Testing, Validation & Security: automated test generation, adversarial checks, privacy and compliance gating</div>
+                    <div class="list-item">Deployment, Observability & Continuous Improvement: CI/CD for models and services, monitoring, feedback loops, and knowledge refresh</div>
+                </div>
 
                 <!-- AI & GenAI Exposure -->
                 <div class="section">
@@ -692,7 +687,7 @@
                         <i class="fas fa-robot"></i> Additional AI & GenAI Capabilities
                     </div>
                     <div class="list-item" style="margin-bottom: 2px;">ML-Ready Design: Designing systems with ML-ready architectures, implementing recommendation engines, and building RAG-based chatbot systems using vector search and embeddings</div>
-                    <div class="list-item" style="margin-bottom: 2px;">Leveraging AI tools for 2+ years, with 1 year of hands-on experience in building AI-powered systems</div>
+                    <div class="list-item" style="margin-bottom: 2px;">2+ years hands-on building AI-powered systems, production-grade RAG solutions, and agentic workflows</div>
                     <div class="list-item" style="margin-bottom: 2px;">Production-grade RAG systems with LangChain, Qdrant vector databases, MongoDB for document storage, and Redis for caching</div>
                 </div>
 
@@ -705,8 +700,8 @@
                     <div class="skill-category" style="margin-bottom: 5px;">
                         <strong style="color: #00695c; font-size: 8.5pt;">Backend Technologies:</strong>
                         <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
-                            <strong>.NET Framework/Core:</strong> 13+ years building enterprise applications, RESTful APIs, and microservices. Migrated legacy VB6/ASP to modern .NET Core architectures.<br>
-                            <strong>C#:</strong> Expert-level proficiency with async/await, LINQ, generics, and advanced language features across 13+ years.<br>
+                            <strong>.NET Framework/Core:</strong> 14+ years building enterprise applications, RESTful APIs, and microservices. Migrated legacy VB6/ASP to modern .NET Core architectures.<br>
+                            <strong>C#:</strong> Expert-level proficiency with async/await, LINQ, generics, and advanced language features across 14+ years.<br>
                             <strong>ASP.NET MVC:</strong> 8+ years developing scalable MVC applications with clean architecture and routing patterns.<br>
                             <strong>Web API:</strong> 7+ years designing RESTful APIs, versioning strategies, integrated with Angular, React, and mobile applications.<br>
                             <strong>Entity Framework/NHibernate:</strong> 10+ years using ORMs for data access, migrations, and query optimization. Implemented Unit of Work and Repository patterns.<br>
@@ -771,7 +766,7 @@
                         <div class="skill-list" style="font-size: 7pt; line-height: 1.3; margin-top: 2px;">
                             <strong>VB 6.0/Classic ASP:</strong> 8+ years reverse-engineering and migrating legacy VB6 and Classic ASP applications to modern .NET Core and Angular platforms.<br>
                             <strong>Strangler Fig Pattern:</strong> 5+ years applying strangler fig patterns for zero-downtime migrations, incremental modernization, and risk mitigation.<br>
-                            <strong>Code Refactoring:</strong> 13+ years refactoring legacy codebases, improving maintainability, and applying design patterns to modernize applications.
+                            <strong>Code Refactoring:</strong> 14+ years refactoring legacy codebases, improving maintainability, and applying design patterns to modernize applications.
                         </div>
                     </div>
 
